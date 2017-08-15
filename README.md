@@ -1,7 +1,10 @@
 # mv
 Vue 仿豆瓣电影app做的一个demo
 > douban movie item<br/>
-Demo链接 https://benchenchuang.github.io/movie/#/
+Demo链接 https://benchenchuang.github.io/movie/#/<br/>
+
+豆瓣电影api跨域问题，我是直接通过this.$http.jsonp请求获得的，请求地址也加了apikey（别人的）<br/>
+
 
 ## Build Setup
 

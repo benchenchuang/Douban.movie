@@ -58,7 +58,7 @@
     }
 	}
 </script>
-<style>
+<style scoped>
 	.movie_item{
     display: block;
 		padding: 0 16px;

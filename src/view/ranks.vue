@@ -28,8 +28,8 @@
 					<img v-for='item in topThree(usBox.subjects)' :src="item.subject.images.small">
 				</div>
 			</router-link>
-
 		</div>
+    
   </div>
 </template>
 <script>

@@ -12,7 +12,7 @@
       <div class="search_list" v-show='!txt.length'>
         <h3 class="search_title">热门搜索</h3>
         <ul class="search_content">
-          <router-link tag='li' v-for="sort in sorts" :to="{name:'sort',params:{id:sort.tag}}">{{sort.tag}}</router-link>
+          <router-link tag='li' v-for="sort in sorts" :to="{name:'sort',params:{id:sort.tag}}" :key="1">{{sort.tag}}</router-link>
         </ul>
       </div>
       <div class="search_list" v-show='txt.length'>
@@ -22,7 +22,7 @@
       </div>
 
       <div v-infinite-scroll="getMore" infinite-scroll-distance="200"  v-show='txt.length'>
-        <search-item v-for='item in data' :searchs='item.subjects'></search-item>
+        <search-item v-for='item in data' :searchs='item.subjects' :key="111"></search-item>
       </div>
 
   </div>

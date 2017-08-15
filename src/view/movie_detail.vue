@@ -2,7 +2,11 @@
 	<div>
 		<detail-header :title="detail.title" v-if='is_nav'></detail-header>
 
-		<div class="movie_box">
+    <div v-if="!detail.images">
+      <p class="loading">热情加载中，请耐心等待...</p>
+    </div>
+
+		<div class="movie_box" v-else>
 			<div class="detail_pic">
 				<img :src="detail.images.large">
 			</div>
@@ -61,6 +65,7 @@
 				<router-link :to="{name:'discuss',params:{id:this.$route.params.id}}" class="more_comment" href="javascript:void(0)">全部影评{{discuss.total}}条</router-link>
 			</div>
 		</div>
+
 
 	</div>
 
@@ -168,6 +173,11 @@
 	}
 </script>
 <style>
+  .loading{
+    text-align: center;
+    line-height:4;
+    color: #888;
+  }
 	.tab_box{
 		width: 100%;
 	}

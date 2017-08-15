@@ -1,9 +1,14 @@
 <template>
 	<div>
 		<detail-header :title='title'></detail-header>
-		<div v-infinite-scroll="getSortAll" infinite-scroll-distance="200">
-	        <search-item v-for='item in data' :searchs='item.subjects'></search-item>
+		  <div v-infinite-scroll="getSortAll" infinite-scroll-distance="200">
+	        <search-item v-for='item in data' :searchs='item.subjects' :key="2"></search-item>
 	    </div>
+
+    <div v-if="!data.length">
+      <p class="loading">热情加载中，请耐心等待...</p>
+    </div>
+
 	</div>
 </template>
 <script>
@@ -37,3 +42,10 @@
 		}
 	}
 </script>
+<style>
+  .loading{
+    text-align: center;
+    line-height:4;
+    color: #888;
+  }
+</style>

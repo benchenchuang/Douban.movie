@@ -1,6 +1,7 @@
 # mv
-
-> douban movie item
+Vue 仿豆瓣电影app做的一个demo
+> douban movie item<br/>
+Demo链接 https://benchenchuang.github.io/movie/#/
 
 ## Build Setup
 
